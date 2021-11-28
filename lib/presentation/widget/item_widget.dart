@@ -10,20 +10,23 @@ class ItemOfListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        circle(data: numberTxt),
-        SizedBox(
-          width: 20.0,
-        ),
-        RichText(
-          textAlign: TextAlign.center,
-          text: TextSpan(
-            text: txt,
-            style: white22regular(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        children: [
+          circle(data: numberTxt),
+          SizedBox(
+            width: 20.0,
           ),
-        ),
-      ],
+          RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              text: txt,
+              style: white22regular(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:quran_karem/bisness_logic/detaild_sur_cubit/details_of_surah_sta
 import 'package:quran_karem/bisness_logic/detaild_sur_cubit/details_of_surah_cubit.dart';
 import 'package:quran_karem/di.dart';
 import 'package:quran_karem/constants/styel.dart';
+import 'package:quran_karem/presentation/raout_app.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';
 import 'package:quran_karem/presentation/widget/header_text_and_img_widget.dart';
 import 'package:quran_karem/presentation/widget/loading_scrren_widget.dart';
@@ -29,7 +30,8 @@ class DetailsOfSurahScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     HeaderImageAndTextWidget(title: title,
-                    isShow: false,),
+                    isShow: false,
+                    onPress:()=> navigatorPop(context:context),),
                     Expanded(child: _buildSurahDetails()),
 
                   ],

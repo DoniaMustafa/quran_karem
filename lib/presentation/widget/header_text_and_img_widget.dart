@@ -2,11 +2,14 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:quran_karem/constants/colors.dart';
 import 'package:quran_karem/constants/styel.dart';
+import 'package:quran_karem/presentation/raout_app.dart';
+import 'package:quran_karem/presentation/screens/home_screen.dart';
 
 class HeaderImageAndTextWidget extends StatelessWidget {
  final String title;
   bool isShow=false;
- HeaderImageAndTextWidget({ required this.title,required this.isShow});
+  final  Function onPress;
+ HeaderImageAndTextWidget({ required this.title,required this.isShow,required this.onPress});
 
  @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class HeaderImageAndTextWidget extends StatelessWidget {
       child: Row(
         children: [
           GestureDetector(
-              onTap: () => Navigator.pop(context),
+              onTap: () =>onPress(),
               child: Icon(Icons.arrow_back_ios)),
      if(isShow == true)
           Expanded(

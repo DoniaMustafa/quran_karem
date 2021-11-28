@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:quran_karem/constants/styel.dart';
 import 'package:quran_karem/presentation/raout_app.dart';
 import 'package:quran_karem/presentation/screens/all_drawer/drawer_screen.dart';
+import 'package:quran_karem/presentation/screens/home_screen.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';
 
 class ContactScreen extends StatelessWidget {
-  double maxSlide = 0.75;
-  dynamic extraHeight = 0.1;
-  Size? screen;
-  CurvedAnimation? animator;
+  // double maxSlide = 0.75;
+  // dynamic extraHeight = 0.1;
+  // Size? screen;
+  // CurvedAnimation? animator;
 
-  ContactScreen(
-      {required this.maxSlide,
-        required this.extraHeight,
-        required this.screen,
-        required this.animator});
+  // ContactScreen(
+  //     {required this.maxSlide,
+  //     required this.extraHeight,
+  //     required this.screen,
+  //     required this.animator});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +28,8 @@ class ContactScreen extends StatelessWidget {
                   padding: EdgeInsets.only(top: 40.0, left: 30.0),
                   alignment: Alignment.topLeft,
                   child: GestureDetector(
-                      onTap: ()=>navigaTo(context,DrawerScreen(maxSlide: maxSlide, extraHeight: extraHeight, screen: screen, animator: animator)),
+                      onTap: () =>Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => HomeScreen())),
                       child: Icon(Icons.arrow_back_ios_outlined))),
               SizedBox(
                 height: 75,

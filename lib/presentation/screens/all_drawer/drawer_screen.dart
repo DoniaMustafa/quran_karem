@@ -75,7 +75,8 @@ class DrawerScreen extends StatelessWidget {
                           padH: 25.0,
                           onPressed: () {
                             print('ok');
-                            navigaTo(context, SurahNamesScreen());
+                            Navigator.push(
+                                context, MaterialPageRoute(builder: (context) => SurahNamesScreen()));                            // navigaTo(context: context,widget:  SurahNamesScreen());
                           },
                         ),
                         SizedBox(
@@ -86,7 +87,10 @@ class DrawerScreen extends StatelessWidget {
                           padH: 25.0,
                           onPressed: () {
                             print('d');
-                            navigaTo(context, NumbersOfJuzScreen());
+                            Navigator.push(
+                                context, MaterialPageRoute(builder: (context) => NumbersOfJuzScreen()));
+
+                                // navigaTo(context: context,widget: NumbersOfJuzScreen());
                           },
                         ),
                         SizedBox(
@@ -95,12 +99,15 @@ class DrawerScreen extends StatelessWidget {
                         DefaultButton(
                           text: 'معلومات التواصل',
                           padH: 25.0,
-                          onPressed: () => navigaTo(context, ContactScreen(
-                              maxSlide: maxSlide,
-                              extraHeight:  extraHeight,
-                              screen: screen,
-                              animator:animator
-                          )),
+                          onPressed: () =>
+                              Navigator.push(
+                                  context, MaterialPageRoute(builder: (context) => ContactScreen())),
+                              // navigaTo(context: context,widget: ContactScreen(
+                          //     maxSlide: maxSlide,
+                          //     extraHeight:  extraHeight,
+                          //     screen: screen,
+                          //     animator:animator
+                          // )),
                         ),
                         SizedBox(
                           height: 15,
@@ -108,12 +115,14 @@ class DrawerScreen extends StatelessWidget {
                         DefaultButton(
                           text: 'الأحكام والشروط',
                           padH: 25.0,
-                          onPressed: () => navigaTo(context, ConditionScreen(
-                              maxSlide: maxSlide,
-                              extraHeight:  extraHeight,
-                              screen: screen,
-                              animator:animator
-                          )),
+                          onPressed: () =>    Navigator.push(
+                              context, MaterialPageRoute(builder: (context) => ConditionScreen())),
+                          //     navigaTo(context: context,widget: ConditionScreen(
+                          //     maxSlide: maxSlide,
+                          //     extraHeight:  extraHeight,
+                          //     screen: screen,
+                          //     animator:animator
+                          // )),
                         ),
                       ],
                     ),

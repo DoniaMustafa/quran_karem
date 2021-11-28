@@ -7,6 +7,7 @@ import 'package:quran_karem/constants/colors.dart';
 import 'package:quran_karem/di.dart';
 import 'package:quran_karem/constants/styel.dart';
 import 'package:quran_karem/data/model/surah_name_model.dart';
+import 'package:quran_karem/presentation/screens/home_screen.dart';
 import 'package:quran_karem/presentation/screens/list_and_details_surah/details_sur_screen.dart';
 import 'package:quran_karem/presentation/raout_app.dart';
 import 'package:quran_karem/presentation/widget/circle.dart';
@@ -75,7 +76,12 @@ _buildSpaceLastOfItem(Data data)=>Column(
             child: customFrame(
               child: Column(
                 children: [
-                  HeaderImageAndTextWidget(title: 'السُّوَر  القرآنية',isShow: true,),
+                  HeaderImageAndTextWidget(title: 'السُّوَر  القرآنية',isShow: true,
+                    onPress: (){
+                    print('ok');
+                      navigaTo(context: context,widget:HomeScreen());
+                    },
+                  ),
                   BlocBuilder<SurahNamesCubit, SurahNameState>(
                     builder: (context, state) {
                       if (state is NamesOfSurahSuccessState &&
@@ -88,8 +94,8 @@ _buildSpaceLastOfItem(Data data)=>Column(
                                     onTap: () {
                                       print(state.names.data![index].number!);
                                       navigaTo(
-                                          context,
-                                          DetailsOfSurahScreen(
+                                          context: context,widget:
+                                      DetailsOfSurahScreen(
                                               title: state
                                                   .names.data![index].name
                                                   .toString(),

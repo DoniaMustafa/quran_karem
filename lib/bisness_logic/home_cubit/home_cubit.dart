@@ -2,8 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:quran_karem/bisness_logic/home_cubit/home_state.dart';
 
-class HomeCubit extends Cubit<HomeState> {
-  HomeCubit() : super(HomeInitialState());
+class LocalHomeData  {
   double? startingPos;
   double maxSlide = 0.75;
   double extraHeight = 0.1;
@@ -13,10 +12,8 @@ class HomeCubit extends Cubit<HomeState> {
   CurvedAnimation? animator;
 
 
-
   void onDragStart(DragStartDetails details) {
     startingPos = details.globalPosition.dx;
-    emit(HomeDragStartState());
 
   }
   void onDragUpdate(DragUpdateDetails details) {
@@ -31,7 +28,6 @@ class HomeCubit extends Cubit<HomeState> {
       if (!drawerVisible && pos >= 0.0) return;
       animationController!.value = pos;
     }
-    emit(HomeDragUpdateState());
   }
 
   void onDragEnd(DragEndDetails details) {
@@ -56,7 +52,6 @@ class HomeCubit extends Cubit<HomeState> {
         drawerVisible = false;
       }
     }
-    emit(HomeDragEndState());
   }
 
   void toggleDrawer() {
@@ -64,7 +59,10 @@ class HomeCubit extends Cubit<HomeState> {
       animationController!.forward();
     else
       animationController!.reverse();
-    emit(HomeToggleDrawerState());
+
   }
+
+
+
 
 }

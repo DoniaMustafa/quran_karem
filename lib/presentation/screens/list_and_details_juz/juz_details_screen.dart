@@ -4,6 +4,7 @@ import 'package:quran_karem/bisness_logic/juz_ama_cubit/juz_cubit.dart';
 import 'package:quran_karem/bisness_logic/juz_ama_cubit/juz_state.dart';
 import 'package:quran_karem/di.dart';
 import 'package:quran_karem/constants/styel.dart';
+import 'package:quran_karem/presentation/raout_app.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';
 import 'package:quran_karem/presentation/widget/header_text_and_img_widget.dart';
 import 'package:quran_karem/presentation/widget/loading_scrren_widget.dart';
@@ -27,7 +28,8 @@ class JuzDetailScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    HeaderImageAndTextWidget(title: juzNumber,isShow: true,),
+                    HeaderImageAndTextWidget(title: juzNumber,isShow: true, onPress: navigatorPop(context:context),
+            ),
                     Expanded(child:_customSurah(),)
                   ],
                 )

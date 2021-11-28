@@ -4,6 +4,7 @@ import 'package:quran_karem/constants/colors.dart';
 import 'package:quran_karem/constants/const.dart';
 import 'package:quran_karem/constants/styel.dart';
 import 'package:quran_karem/presentation/raout_app.dart';
+import 'package:quran_karem/presentation/screens/home_screen.dart';
 import 'package:quran_karem/presentation/screens/list_and_details_juz/juz_details_screen.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';
 import 'package:quran_karem/presentation/widget/header_text_and_img_widget.dart';
@@ -19,8 +20,8 @@ class NumbersOfJuzScreen extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             itemBuilder: (context, i) => InkWell(
                 onTap: () => navigaTo(
-                    context,
-                    JuzDetailScreen(
+                    context: context,widget:
+                JuzDetailScreen(
                       id: i + 1,
                       juzNumber: numbersOfJuz[i].toString(),
                     )),
@@ -48,7 +49,9 @@ class NumbersOfJuzScreen extends StatelessWidget {
           child: customFrame(
               child: Column(
                 children: [
-                  HeaderImageAndTextWidget(title:  'اجزاء القران الكريم',isShow: true,),
+                  HeaderImageAndTextWidget(title:  'اجزاء القران الكريم',isShow: true,
+                    onPress: ()=>navigaTo(context: context,widget:  HomeScreen()),
+                  ),
                   buildListItem(context),
                 ],
               )),

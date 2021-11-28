@@ -1,8 +1,7 @@
-part of 'audio_details_cubit.dart';
 
-@immutable
-abstract class AudioDetailsState {}
+import 'package:quran_karem/data/model/surah_audio_details_model.dart';
 
+abstract class AudioDetailsState{}
 class AudioDetailsInitial extends AudioDetailsState {}
 class ClickItemState extends AudioDetailsState {}
 class AudioDetailsLoadingState extends AudioDetailsState {}

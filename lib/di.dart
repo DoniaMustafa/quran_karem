@@ -21,4 +21,4 @@ AudioDetailsCubit audioDetailsRep =AudioDetailsCubit(repository);
 JuzCubit juzCubitRep =JuzCubit(repository);
 SurahNamesCubit nameSurahRep= SurahNamesCubit(repository);
 DetailsOfSurahCubit detailsOfSurahRep=DetailsOfSurahCubit(repository);
-HomeCubit homeCubit =HomeCubit();
+LocalHomeData localHomeData =LocalHomeData();

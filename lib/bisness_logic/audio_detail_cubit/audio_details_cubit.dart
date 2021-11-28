@@ -3,22 +3,22 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:quran_karem/bisness_logic/audio_detail_cubit/audio_details_state.dart';
 import 'package:quran_karem/constants/const.dart';
 import 'package:quran_karem/data/model/audio_progress_bar_model.dart';
 import 'package:quran_karem/data/model/surah_audio_details_model.dart';
 import 'package:quran_karem/data/repositories/repostory_imp.dart';
-part 'audio_details_state.dart';
 
 class AudioDetailsCubit extends Cubit<AudioDetailsState> {
   Repository _repository;
   AudioDetailsCubit(this._repository) : super(AudioDetailsInitial());
   AudioPlayer? player;
   String? select;
-
-
-
   SurahAudioDetailsModel? audioDetailsModel;
   List<Recitation>? recitations;
+
+
+
   Future<Response?>getAudioDetails(int reader)async{
     emit(AudioDetailsLoadingState());
     return await _repository.getAudioSurahDetails(id:reader).then((value) {
