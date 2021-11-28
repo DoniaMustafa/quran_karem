@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:quran_karem/constants/styel.dart';
 import 'package:quran_karem/constants/url.dart';
+import 'package:quran_karem/presentation/raout_app.dart';
+import 'package:quran_karem/presentation/screens/all_drawer/drawer_screen.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ConditionScreen extends StatelessWidget {
+  double maxSlide = 0.75;
+  dynamic extraHeight = 0.1;
+  Size? screen;
+  CurvedAnimation? animator;
+
+  ConditionScreen(
+      {required this.maxSlide,
+        required this.extraHeight,
+        required this.screen,
+        required this.animator});
+
   void lunchUrl()async{
     await launch(islamicUrl);
   }
@@ -22,7 +35,7 @@ class ConditionScreen extends StatelessWidget {
                   padding: EdgeInsets.only(top: 40.0,left: 30.0),
                   alignment: Alignment.topLeft,
                   child: GestureDetector(
-                      onTap: ()=>Navigator.pop(context),
+                      onTap: ()=>navigaTo(context,DrawerScreen(maxSlide: maxSlide, extraHeight: extraHeight, screen: screen, animator: animator)),
                       child: Icon(Icons.arrow_back_ios_outlined))),
               SizedBox(
 
