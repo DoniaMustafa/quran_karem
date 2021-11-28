@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
-      darkTheme: darkThem,
-      routes: Routes().routes,
-      home: BlocProvider(
+      darkTheme: darkThem, home: BlocProvider(
         create: (context) => nameSurahRep,
         child: BlocBuilder<SurahNamesCubit, SurahNameState>(
           builder: (context, state) {

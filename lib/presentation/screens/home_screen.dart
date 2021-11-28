@@ -8,6 +8,7 @@ import 'package:quran_karem/presentation/raout_app.dart';
 import 'package:quran_karem/presentation/screens/all_drawer/drawer_screen.dart';
 import 'package:quran_karem/presentation/screens/list_and_details_audio/surah_audio_screen.dart';
 import 'package:quran_karem/presentation/screens/list_and_details_juz/numbers_of_juz_screen.dart';
+import 'package:quran_karem/presentation/screens/list_and_details_surah/surah_names_screen.dart';
 import 'package:quran_karem/presentation/widget/defoult_button.dart';
 import 'package:quran_karem/presentation/widget/header_inside_home_drawer_widget.dart';
 
@@ -146,7 +147,7 @@ class _ScreenState extends State<HomeScreen>
         DefaultButton(
           padH:70.0 ,
           text: 'القران الكريم نص',
-          onPressed: () => pushNamed(context, '/home')
+          onPressed: () => navigaTo(context: context,widget: SurahNamesScreen())
         ),
         SizedBox(
           height: 15.0,
