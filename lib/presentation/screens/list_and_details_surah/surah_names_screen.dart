@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_karem/bisness_logic/names_sur_cubit/surah_name_cubit.dart';
 import 'package:quran_karem/bisness_logic/names_sur_cubit/surah_name_state.dart';
 import 'package:quran_karem/constants/colors.dart';
-import 'package:quran_karem/constants/di.dart';
+import 'package:quran_karem/di.dart';
 import 'package:quran_karem/constants/styel.dart';
 import 'package:quran_karem/data/model/surah_name_model.dart';
 import 'package:quran_karem/presentation/screens/list_and_details_surah/details_sur_screen.dart';
@@ -17,11 +17,10 @@ import 'package:quran_karem/presentation/widget/loading_scrren_widget.dart';
 class SurahNamesScreen extends StatelessWidget {
 
 
-  Widget buildListNamesOfSurah({required Data data}) => Padding(
+ _buildListNamesOfSurah({required Data data}) => Padding(
         padding: const EdgeInsets.only(left: 30.0, right: 30),
         child: Row(
           textDirection: TextDirection.rtl,
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             circle(data: data.number.toString()),
             SizedBox(
@@ -37,31 +36,32 @@ class SurahNamesScreen extends StatelessWidget {
             Spacer(
               flex: 1,
             ),
-            Column(
-              children: [
-                Row(
-                  children: [
-                    RichText(
-                      text: TextSpan(
-                          style: white18regular(), text: 'عدد الايات : '),
-                    ),
-                    RichText(
-                      text: TextSpan(
-                          style: white18regular(),
-                          text: data.numberOfAyahs.toString()),
-                    ),
-                  ],
-                ),
-                RichText(
-                  text: TextSpan(
-                      text: data.revelationType == "Medinan" ? "مدينة" : "مكة",
-                      style: white18regular()),
-                ),
-              ],
-            ),
+            _buildSpaceLastOfItem(data)
           ],
         ),
       );
+_buildSpaceLastOfItem(Data data)=>Column(
+  children: [
+  Row(
+  children: [
+  RichText(
+  text: TextSpan(
+  style: white18regular(), text: 'عدد الايات : '),
+  ),
+  RichText(
+  text: TextSpan(
+  style: white18regular(),
+  text: data.numberOfAyahs.toString()),
+  ),
+  ],
+  ),
+  RichText(
+  text: TextSpan(
+  text: data.revelationType == "Medinan" ? "مدينة" : "مكة",
+  style: white18regular()),
+  ),
+  ],
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +96,7 @@ class SurahNamesScreen extends StatelessWidget {
                                               id: state
                                                   .names.data![index].number!));
                                     },
-                                    child: buildListNamesOfSurah(
+                                    child: _buildListNamesOfSurah(
                                       data: state.names.data![index],
                                     ),
                                   ),

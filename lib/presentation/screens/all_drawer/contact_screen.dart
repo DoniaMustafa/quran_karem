@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quran_karem/constants/colors.dart';
 import 'package:quran_karem/constants/styel.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';
 
 class ContactScreen extends StatelessWidget {
-  const ContactScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +11,6 @@ class ContactScreen extends StatelessWidget {
         child: customFrame(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            // mainAxisAlignment: MainAxisAlignment.S,
             children: [
               Container(
                   padding: EdgeInsets.only(top: 40.0, left: 30.0),

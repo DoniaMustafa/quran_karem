@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_karem/bisness_logic/all_audio_cubit/all_audio_cubit.dart';
 import 'package:quran_karem/bisness_logic/all_audio_cubit/all_audio_state.dart';
-import 'package:quran_karem/constants/di.dart';
+import 'package:quran_karem/di.dart';
 import 'package:quran_karem/presentation/raout_app.dart';
 import 'package:quran_karem/presentation/screens/list_and_details_audio/readers_screen.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';

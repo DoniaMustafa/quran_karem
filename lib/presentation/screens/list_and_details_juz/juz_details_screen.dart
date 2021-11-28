@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_karem/bisness_logic/juz_ama_cubit/juz_cubit.dart';
 import 'package:quran_karem/bisness_logic/juz_ama_cubit/juz_state.dart';
-import 'package:quran_karem/constants/di.dart';
+import 'package:quran_karem/di.dart';
 import 'package:quran_karem/constants/styel.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';
 import 'package:quran_karem/presentation/widget/header_text_and_img_widget.dart';

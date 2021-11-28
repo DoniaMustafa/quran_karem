@@ -11,7 +11,7 @@ import 'package:quran_karem/presentation/widget/defoult_button.dart';
 import 'package:quran_karem/presentation/widget/header_inside_home_drawer_widget.dart';
 
 class DrawerScreen extends StatelessWidget {
-  dynamic maxSlide = 0.75;
+  double maxSlide = 0.75;
   dynamic extraHeight = 0.1;
   Size? screen;
   CurvedAnimation? animator;

@@ -7,7 +7,7 @@ import 'package:quran_karem/bisness_logic/all_audio_cubit/all_audio_state.dart';
 import 'package:quran_karem/bisness_logic/audio_detail_cubit/audio_details_cubit.dart';
 import 'package:quran_karem/constants/colors.dart';
 import 'package:quran_karem/constants/const.dart';
-import 'package:quran_karem/constants/di.dart';
+import 'package:quran_karem/di.dart';
 import 'package:quran_karem/constants/styel.dart';
 import 'package:quran_karem/data/model/audio_progress_bar_model.dart';
 import 'package:quran_karem/presentation/widget/frame_widget.dart';
