@@ -2,14 +2,6 @@
 
 The application of the Quran Karem with audio and text
 
-# features in app 
-
-* state Management(bloc)
-* clean architecture(MVVM)
-* animation
-* dio
-* just audio
- 
 # Screens
 
 ![ad02d9b2-e80a-4ff9-9016-55ca72b08e86](https://user-images.githubusercontent.com/60053771/142698266-753f8df5-c9c3-4fef-897d-38468d772731.jpg)
